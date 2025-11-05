@@ -18,15 +18,17 @@ interface LoginProps {
 
 export default function Login({ status, canResetPassword }: LoginProps) {
     return (
-        <AuthLayout title="Log in to your account" description="Enter your email and password below to log in">
+        <AuthLayout title="Belépés" description="Add meg az email címed és jelszavad a bejelentkezéshez">
             <Head title="Log in" />
 
-            <Form {...AuthenticatedSessionController.store.form()} resetOnSuccess={['password']} className="flex flex-col gap-6">
+            <Form {...AuthenticatedSessionController.store.form()} resetOnSuccess={['password']} className="d-flex flex-column gap-4">
                 {({ processing, errors }) => (
                     <>
-                        <div className="grid gap-6">
-                            <div className="grid gap-2">
-                                <Label htmlFor="email">Email address</Label>
+                        <div className="d-grid gap-4">
+                            <div className="mb-3">
+                                <Label htmlFor="email" className="form-label">
+                                    Email
+                                </Label>
                                 <Input
                                     id="email"
                                     type="email"
@@ -36,16 +38,19 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                                     tabIndex={1}
                                     autoComplete="email"
                                     placeholder="email@example.com"
+                                    className="form-control"
                                 />
                                 <InputError message={errors.email} />
                             </div>
 
-                            <div className="grid gap-2">
-                                <div className="flex items-center">
-                                    <Label htmlFor="password">Password</Label>
+                            <div className="mb-3">
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <Label htmlFor="password" className="form-label">
+                                        Jelszó
+                                    </Label>
                                     {canResetPassword && (
-                                        <TextLink href={request()} className="ml-auto text-sm" tabIndex={5}>
-                                            Forgot password?
+                                        <TextLink href={request()} className="text-decoration-none small" tabIndex={5}>
+                                            Elfelejtetted jelszavad?
                                         </TextLink>
                                     )}
                                 </div>
@@ -56,26 +61,29 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                                     required
                                     tabIndex={2}
                                     autoComplete="current-password"
-                                    placeholder="Password"
+                                    placeholder="Jelszó"
+                                    className="form-control"
                                 />
                                 <InputError message={errors.password} />
                             </div>
 
-                            <div className="flex items-center space-x-3">
-                                <Checkbox id="remember" name="remember" tabIndex={3} />
-                                <Label htmlFor="remember">Remember me</Label>
+                            <div className="form-check mb-3">
+                                <Checkbox id="remember" name="remember" tabIndex={3} className="form-check-input" />
+                                <Label htmlFor="remember" className="form-check-label">
+                                    Emlékezz rám
+                                </Label>
                             </div>
 
-                            <Button type="submit" className="mt-4 w-full" tabIndex={4} disabled={processing}>
-                                {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
-                                Log in
+                            <Button type="submit" tabIndex={4} disabled={processing} className="btn btn-primary w-100">
+                                {processing && <LoaderCircle className="spinner-border spinner-border-sm me-2" />}
+                                Belépés
                             </Button>
                         </div>
 
-                        <div className="text-center text-sm text-muted-foreground">
-                            Don't have an account?{' '}
-                            <TextLink href={register()} tabIndex={5}>
-                                Sign up
+                        <div className="small mt-3 text-center text-muted">
+                            Nincs még fiókod?{' '}
+                            <TextLink href={register()} tabIndex={5} className="text-decoration-none">
+                                Regisztráció
                             </TextLink>
                         </div>
                     </>
