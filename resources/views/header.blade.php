@@ -18,6 +18,29 @@
                 <a href="{{ route('home') }}" class="nav-item nav-link {{ request()->routeIs('home') ? 'active' : ''}}">Főoldal</a>
                 <a href="{{ route('database') }}" class="nav-item nav-link {{ request()->routeIs('database') ? 'active' : ''}}">Adatbázis</a>
                 <a href="{{ route('contact') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">Kapcsolat</a>
+                @if (Auth::check())
+                <a href="{{ route('messages') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">Üzenetek</a>
+                @endif
+                <a href="{{ route('diagram') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">Diagram</a>
+                <a href="{{ route('crud') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">CRUD</a>
+
+
+                @if (Auth::check())
+                    <!-- Admin jog ellenőrzése -->
+                    @if (Auth::User()->role==1) 
+                    <a href="{{ route('admin') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">Admin</a>
+                    @endif
+
+                    <a href="{{ route('logout') }}" class="nav-item nav-link"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Kilépés
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                @else
+                <a href="{{ route('login') }}" class="nav-item nav-link">Belépés</a>
+                @endif
             </div>
 
             <div class="h-100 d-lg-inline-flex align-items-center d-none">
