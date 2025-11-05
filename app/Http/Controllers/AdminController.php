@@ -10,6 +10,8 @@ class AdminController extends Controller
     {
         if ($request->user()->role == 1) {
             return view('admin');
-        } else return redirect('/');
+        } else {
+            return redirect('/');
+        }
     }
 }
