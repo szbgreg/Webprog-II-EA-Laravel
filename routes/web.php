@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SutiController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -7,9 +8,7 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/database', function () {
-    return view('database');
-})->name('database');
+Route::get('/database', [SutiController::class, 'index'])->name('database');
 
 Route::get('/contact', function () {
     return view('contact');
