@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SutiSeeder::class);
         $this->call(TartalomSeeder::class);
         $this->call(ArSeeder::class);
+        $this->call(MessageSeeder::class);
     }
 }

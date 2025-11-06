@@ -19,16 +19,16 @@
                 <a href="{{ route('database') }}" class="nav-item nav-link {{ request()->routeIs('database') ? 'active' : ''}}">Adatbázis</a>
                 <a href="{{ route('contact') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">Kapcsolat</a>
                 @if (Auth::check())
-                <a href="{{ route('messages') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">Üzenetek</a>
+                <a href="{{ route('messages') }}" class="nav-item nav-link {{ request()->routeIs('messages') ? 'active' : ''}}">Üzenetek</a>
                 @endif
-                <a href="{{ route('diagram') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">Diagram</a>
-                <a href="{{ route('crud') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">CRUD</a>
+                <a href="{{ route('diagram') }}" class="nav-item nav-link {{ request()->routeIs('diagram') ? 'active' : ''}}">Diagram</a>
+                <a href="{{ route('crud') }}" class="nav-item nav-link {{ request()->routeIs('crud') ? 'active' : ''}}">CRUD</a>
 
 
                 @if (Auth::check())
                     <!-- Admin jog ellenőrzése -->
                     @if (Auth::User()->role==1) 
-                    <a href="{{ route('admin') }}" class="nav-item nav-link {{ request()->routeIs('contact') ? 'active' : ''}}">Admin</a>
+                    <a href="{{ route('admin') }}" class="nav-item nav-link {{ request()->routeIs('admin') ? 'active' : ''}}">Admin</a>
                     @endif
 
                     <a href="{{ route('logout') }}" class="nav-item nav-link"
