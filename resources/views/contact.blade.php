@@ -22,7 +22,7 @@
 </div>
 
 <div class="container">
-    @if(isset($success) && $success == true)
+    @if(session('success'))
     <div class="alert alert-success mt-3">
         Az üzenet küldése sikeres!
     </div>

@@ -32,6 +32,8 @@ class ContactFormController extends Controller
         $msg->content = $request->message;
         $msg->save();
 
-        return view('contact', ['success' => true]);
+        return redirect()
+            ->route('contact')
+            ->with('success', true);
     }
 }
