@@ -22,6 +22,8 @@ Route::get('/crud', function () {
     return view('crud');
 })->name('crud');
 
+Route::post('contact', 'App\Http\Controllers\ContactFormController@postMessage');
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('messages', function () {
         return view('messages');
