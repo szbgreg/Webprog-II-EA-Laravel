@@ -25,9 +25,7 @@ Route::get('/crud', function () {
 Route::post('contact', 'App\Http\Controllers\ContactFormController@postMessage');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('messages', function () {
-        return view('messages');
-    })->name('messages');
+    Route::get('messages', 'App\Http\Controllers\MessageController@read')->name('messages');
 
     Route::get('admin', 'App\Http\Controllers\AdminController@index')->name('admin');
 
