@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Suti extends Model
 {
     protected $table = 'suti';
+
     protected $fillable = ['nev', 'tipus', 'dijazott'];
+
+    public function arak()
+    {
+        return $this->hasMany(Ar::class, 'sutiid');
+    }
+
+    public function tartalmak()
+    {
+        return $this->hasMany(Tartalom::class, 'sutiid');
+    }
 }

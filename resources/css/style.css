@@ -346,3 +346,23 @@ h6,
 .footer .copyright a:hover {
     color: var(--dark);
 }
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    --bs-table-striped-bg: var(--bs-white);
+}
+
+.table-hover > tbody > tr:hover {
+    --bs-table-accent-bg: #d0f7ff;
+    color: var(--bs-table-hover-color);
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: var(--bs-grey-dark);
+    background-color: #d0f7ff;
+    border-color: #dee2e6;
+}
+
+.page-link {
+    color: var(--bs-grey-dark);
+}

@@ -12,7 +12,7 @@ id	nev	tipus	dijazott
 11	Alpesi karamell	tortaszelet	0
 12	Kókuszcsók	édes teasütemény	0
 13	Habos mákos	pite	0
-14	Szilvás	pite	0
+14	Szilvás	pite    0
 15	Juhtúrós párna	sós teasütemény	0
 16	Mákos guba	tortaszelet	0
 17	Néró	édes teasütemény	0

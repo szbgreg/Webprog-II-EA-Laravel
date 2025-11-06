@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Suti;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class SutiSeeder extends Seeder
@@ -23,10 +22,10 @@ class SutiSeeder extends Seeder
             [$id, $nev, $tipus, $dijazott] = explode("\t", trim($line));
 
             Suti::create([
-                'id' => (int)$id,
+                'id' => (int) $id,
                 'nev' => $nev,
                 'tipus' => $tipus,
-                'dijazott' => (bool)$dijazott,
+                'dijazott' => (bool) $dijazott,
             ]);
         }
     }

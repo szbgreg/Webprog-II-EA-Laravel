@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Tartalom;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class TartalomSeeder extends Seeder
@@ -23,8 +22,8 @@ class TartalomSeeder extends Seeder
             [$id, $sutiid, $mentes] = explode("\t", trim($line));
 
             Tartalom::create([
-                'id' => (int)$id,
-                'sutiid' => (int)$sutiid,
+                'id' => (int) $id,
+                'sutiid' => (int) $sutiid,
                 'mentes' => $mentes,
             ]);
         }
