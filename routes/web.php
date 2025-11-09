@@ -16,9 +16,7 @@ Route::get('/contact', function () {
 
 Route::get('/diagram', 'App\Http\Controllers\DiagramController@index')->name('diagram');
 
-Route::get('/crud', function () {
-    return view('crud');
-})->name('crud');
+Route::get('/crud', 'App\Http\Controllers\CrudController@read')->name('crud');
 
 Route::post('contact', 'App\Http\Controllers\ContactFormController@postMessage');
 
