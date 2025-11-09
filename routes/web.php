@@ -14,9 +14,7 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/diagram', function () {
-    return view('diagram');
-})->name('diagram');
+Route::get('/diagram', 'App\Http\Controllers\DiagramController@index')->name('diagram');
 
 Route::get('/crud', function () {
     return view('crud');
