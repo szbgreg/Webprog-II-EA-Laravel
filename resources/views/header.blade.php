@@ -22,7 +22,7 @@
                 <a href="{{ route('messages') }}" class="nav-item nav-link {{ request()->routeIs('messages') ? 'active' : ''}}">Üzenetek</a>
                 @endif
                 <a href="{{ route('diagram') }}" class="nav-item nav-link {{ request()->routeIs('diagram') ? 'active' : ''}}">Diagram</a>
-                <a href="{{ route('crud') }}" class="nav-item nav-link {{ request()->routeIs('crud') ? 'active' : ''}}">CRUD</a>
+                <a href="{{ route('sutik.index') }}" class="nav-item nav-link {{ request()->routeIs('sutik.index') ? 'active' : ''}}">CRUD</a>
 
 
                 @if (Auth::check())
