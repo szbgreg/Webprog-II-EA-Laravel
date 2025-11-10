@@ -15,7 +15,7 @@
             <div class="col-lg-6 text-center animated fadeIn">
                 <img class="img-fluid animated pulse infinite"
                     style="animation-duration: 3s; max-height: 260px;"
-                    src="/img/crud.png" alt="Sütemény crud">
+                    src="img/crud.png" alt="Sütemény crud">
             </div>
         </div>
     </div>

@@ -16,13 +16,13 @@ Route::get('/contact', function () {
 
 Route::get('/diagram', 'App\Http\Controllers\DiagramController@index')->name('diagram');
 
-Route::get('/crud/sutik', 'App\Http\Controllers\CrudController@read')->name('sutik.index');
-Route::get('/crud/sutik/create', 'App\Http\Controllers\CrudController@create')->name('sutik.create');
-Route::post('/crud/sutik', 'App\Http\Controllers\CrudController@store')->name('sutik.store');
-Route::get('/crud/sutik/{suti}', 'App\Http\Controllers\CrudController@show')->name('sutik.show');
-Route::get('/crud/sutik/{suti}/edit', 'App\Http\Controllers\CrudController@edit')->name('sutik.edit');
-Route::put('/crud/sutik/{suti}', 'App\Http\Controllers\CrudController@update')->name('sutik.update');
-Route::delete('/crud/sutik/{suti}', 'App\Http\Controllers\CrudController@destroy')->name('sutik.destroy');
+Route::get('/sutik', 'App\Http\Controllers\CrudController@read')->name('sutik.index');
+Route::get('/sutik/create', 'App\Http\Controllers\CrudController@create')->name('sutik.create');
+Route::post('/sutik', 'App\Http\Controllers\CrudController@store')->name('sutik.store');
+Route::get('/sutik/{suti}', 'App\Http\Controllers\CrudController@show')->name('sutik.show');
+Route::get('/sutik/{suti}/edit', 'App\Http\Controllers\CrudController@edit')->name('sutik.edit');
+Route::put('/sutik/{suti}', 'App\Http\Controllers\CrudController@update')->name('sutik.update');
+Route::delete('/sutik/{suti}', 'App\Http\Controllers\CrudController@destroy')->name('sutik.destroy');
 
 Route::post('contact', 'App\Http\Controllers\ContactFormController@postMessage');
 
