@@ -30,6 +30,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('messages', 'App\Http\Controllers\MessageController@read')->name('messages');
 
     Route::get('admin', 'App\Http\Controllers\AdminController@index')->name('admin');
+    Route::get('admin/users/{user}/edit', 'App\Http\Controllers\AdminController@edit')->name('admin.users.edit');
+    Route::put('admin/users/{user}', 'App\Http\Controllers\AdminController@updateRole')->name('admin.users.update');
 
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');

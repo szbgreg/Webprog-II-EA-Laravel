@@ -35,7 +35,7 @@
                     <th class="text-primary" style="width: 30%;">Név</th>
                     <th class="text-primary" style="width: 15%;">Típus</th>
                     <th class="text-primary text-center pe-5" style="width: 10%;">Díjazott</th>
-                    <th class="text-primary text-center pe-5" style="width: 20%;">Szerkesztés / Törlés</th>
+                    <th class="text-primary text-center" style="width: 20%;">Művelet</th>
                 </tr>
             </thead>
             <tbody>

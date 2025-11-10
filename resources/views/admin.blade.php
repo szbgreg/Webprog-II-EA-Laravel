@@ -56,7 +56,7 @@
                                     <span class="badge bg-secondary">Felhasználó</span>
                                 @endif
                             </td>
-                            <td>Módosítás</td>
+                            <td><a href="/admin/users/{{ $user->id }}/edit">Módosítás</a></td>
                         </tr>
                     @endforeach
                 </tbody>
