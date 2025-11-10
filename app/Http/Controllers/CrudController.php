@@ -77,4 +77,15 @@ class CrudController extends Controller
             return back()->with('failed', 'Hiba történt. A süti módosítása sikertelen.');
         }
     }
+
+    public function destroy(Suti $suti)
+    {
+        $suti = $suti->delete();
+
+        if (! is_null($suti)) {
+            return back()->with('success', 'A süti törlése sikeres!');
+        } else {
+            return back()->with('failed', 'Hiba történt. A süti törlése sikertelen.');
+        }
+    }
 }

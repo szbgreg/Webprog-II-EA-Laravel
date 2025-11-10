@@ -22,6 +22,7 @@ Route::post('/crud/sutik', 'App\Http\Controllers\CrudController@store')->name('s
 Route::get('/crud/sutik/{suti}', 'App\Http\Controllers\CrudController@show')->name('sutik.show');
 Route::get('/crud/sutik/{suti}/edit', 'App\Http\Controllers\CrudController@edit')->name('sutik.edit');
 Route::put('/crud/sutik/{suti}', 'App\Http\Controllers\CrudController@update')->name('sutik.update');
+Route::delete('/crud/sutik/{suti}', 'App\Http\Controllers\CrudController@destroy')->name('sutik.destroy');
 
 Route::post('contact', 'App\Http\Controllers\ContactFormController@postMessage');
 
