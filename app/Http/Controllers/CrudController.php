@@ -43,4 +43,9 @@ class CrudController extends Controller
             return back()->with('failed', 'Hiba történt. A süti mentése sikertelen.');
         }
     }
+
+    public function show(Suti $suti)
+    {
+        return view('show-suti', compact('suti'));
+    }
 }

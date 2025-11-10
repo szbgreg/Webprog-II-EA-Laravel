@@ -19,6 +19,7 @@ Route::get('/diagram', 'App\Http\Controllers\DiagramController@index')->name('di
 Route::get('/crud/sutik', 'App\Http\Controllers\CrudController@read')->name('sutik.index');
 Route::get('/crud/sutik/create', 'App\Http\Controllers\CrudController@create')->name('sutik.create');
 Route::post('/crud/sutik', 'App\Http\Controllers\CrudController@store')->name('sutik.store');
+Route::get('/crud/sutik/{suti}', 'App\Http\Controllers\CrudController@show')->name('sutik.show');
 
 Route::post('contact', 'App\Http\Controllers\ContactFormController@postMessage');
 
