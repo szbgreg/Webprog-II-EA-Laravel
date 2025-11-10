@@ -14,7 +14,9 @@ class DiagramController extends Controller
 
         $atlagok = DB::table('ar')->select('egyseg', DB::raw('AVG(ertek) as atlagar'))->groupBy('egyseg')->orderByDesc('atlagar')->get();
         $atlagokLabels = $atlagok->pluck('egyseg');
-        $atlagokValues = $atlagok->pluck('atlagar')->map(fn($v) => round($v, 0));
+        $atlagokValues = $atlagok->pluck('atlagar')->map(function ($v) {
+            return round($v, 0);
+        });
 
         return view('diagram', compact('sutikLabels', 'sutikValues', 'atlagokLabels', 'atlagokValues'));
     }

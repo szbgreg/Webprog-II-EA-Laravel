@@ -16,9 +16,13 @@ Route::get('/contact', function () {
 
 Route::get('/diagram', 'App\Http\Controllers\DiagramController@index')->name('diagram');
 
-Route::get('/crud', function () {
-    return view('crud');
-})->name('crud');
+Route::get('/sutik', 'App\Http\Controllers\CrudController@read')->name('sutik.index');
+Route::get('/sutik/create', 'App\Http\Controllers\CrudController@create')->name('sutik.create');
+Route::post('/sutik', 'App\Http\Controllers\CrudController@store')->name('sutik.store');
+Route::get('/sutik/{suti}', 'App\Http\Controllers\CrudController@show')->name('sutik.show');
+Route::get('/sutik/{suti}/edit', 'App\Http\Controllers\CrudController@edit')->name('sutik.edit');
+Route::put('/sutik/{suti}', 'App\Http\Controllers\CrudController@update')->name('sutik.update');
+Route::delete('/sutik/{suti}', 'App\Http\Controllers\CrudController@destroy')->name('sutik.destroy');
 
 Route::post('contact', 'App\Http\Controllers\ContactFormController@postMessage');
 
