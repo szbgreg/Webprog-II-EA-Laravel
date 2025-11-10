@@ -51,7 +51,7 @@
                     </td>
                     <td class="d-flex gap-2 justify-content-center">
                         <a href="{{route('sutik.show', $suti->id)}}"><i class="bi bi-eye text-dark fs-4"></i></a> 
-                        <a><i class="bi bi-pencil text-warning fs-4"></i></a>
+                        <a href="{{route('sutik.edit', $suti->id)}}"><i class="bi bi-pencil text-warning fs-4"></i></a>
                         <a><i class="bi bi-trash text-danger fs-4"></i></a>
                     </td>
                 </tr>
