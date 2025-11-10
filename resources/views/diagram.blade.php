@@ -1,7 +1,6 @@
 @extends("mainpage")
 @section("content")
 
-{{-- Hero szekció --}}
 <div class="container-fluid hero-header bg-light py-2 mb-5">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
