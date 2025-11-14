@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/database', [SutiController::class, 'index'])->name('database');
+Route::get('/adatbazis', [SutiController::class, 'index'])->name('database');
 
 Route::get('/contact', function () {
     return view('contact');
